@@ -14,7 +14,7 @@ const mutations= {
 
 const actions= {
     fetchMovies(context){
-        service.fetchMovies().then((snapshot) => {
+        return service.fetchMovies().then((snapshot) => {
            context.commit('setMovies', snapshot.val())
         });
     }
