@@ -2,10 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>cineapp-vue</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">    
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDDm8P4iPPdAX4ZpOPoXElyxlxTvqsRZnA",
+      authDomain: "cineapp-vue.firebaseapp.com",
+      databaseURL: "https://cineapp-vue.firebaseio.com",
+      projectId: "cineapp-vue",
+      storageBucket: "cineapp-vue.appspot.com",
+      messagingSenderId: "1001855305027",
+      appId: "1:1001855305027:web:fc6f94f028390fb098dbf6",
+      measurementId: "G-03H6GDT6WR"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+  </script>
     <script src="/dist/build.js"></script>
   </body>
 </html>
