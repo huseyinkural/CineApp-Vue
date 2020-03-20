@@ -1,10 +1,21 @@
 <template>
-  <h3>Hello World</h3>
+  <app-header />
 </template>
 
 <script>
+import AppHeader from './AppHeader.vue'
 export default {
+    name: 'Home',
+    data(){
+        return{}
+    },
+    components:{
+        AppHeader,
+    },
 
+    created(){
+        this.$store.dispatch('fetchMovies');
+    }
 }
 </script>
 

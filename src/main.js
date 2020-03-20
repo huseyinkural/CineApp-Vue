@@ -4,24 +4,20 @@ import App from './App.vue'
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 
-import Home from './components/Home.vue';
+import storeOptions from './stores/store'
+import routerOptions from './router/router'
+
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
-const router = new VueRouter({
+const router = new VueRouter(routerOptions);
 
-  routes: [
-    {
-      path: '/',
-      component: Home
-    }
-  ]
-
-});
+const store = new Vuex.Store(storeOptions);
 
 new Vue({
-  el: '#app',
+  el: '#app',  
+  render: h => h(App),
   router,
-  render: h => h(App)
+  store,
 })
