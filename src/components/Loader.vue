@@ -13,6 +13,7 @@
   display: inline-block;
   position: relative; 
   margin: 30px 0 30px -20px;
+  left: 50%;
 }
 @keyframes spin {
   0% { transform: rotate(0deg); }
