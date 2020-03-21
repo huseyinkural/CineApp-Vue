@@ -1,17 +1,22 @@
 <template>
-    <div>
-        Hello
-    </div>
+    <section>
+        <loader v-if="isLoading"/>
+    </section>
 </template>
 
 <script>
+import Loader from './Loader.vue';
 export default {
-
-    
+    data(){
+        return {
+            isLoading: true
+        }
+    },
 
     created(){     
         this.$store.dispatch('fetchMovieDetails', this.movieId).then( ()=>{
             console.log("data fecthed"); 
+            this.isLoading = false;
         });
     },
     computed: {
@@ -22,6 +27,9 @@ export default {
             return this.$store.state.movieDetails[this.movieId];
         }
 
+    },
+    components: {
+        Loader,
     }
     
 }
