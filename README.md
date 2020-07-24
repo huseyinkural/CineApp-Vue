@@ -2,9 +2,7 @@
 
 > https://cineapp-vue.firebaseapp.com/
 
-# cineapp-vue
 
-> A Vue.js project from https://www.youtube.com/watch?v=Azo9pPjZ1k4&list=PLa3NvhdFWNirpx6x-LIMfTrwOfLzCkfAU @Fatih Acet
 
 ## Build Setup
 
